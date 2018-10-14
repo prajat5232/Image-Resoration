@@ -1,3 +1,4 @@
+% Author- Rajat Patel
 function z=mydft(x)
 
 N=size(x,2);

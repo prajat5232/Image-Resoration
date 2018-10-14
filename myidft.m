@@ -1,3 +1,4 @@
+% Author - Rajat Patel
 function z=myidft(x)
 
 N=size(x,2);

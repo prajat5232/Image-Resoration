@@ -1,6 +1,9 @@
+ % Author- Rajat Patel
 function F=mydft2(f,M1,N1)
 M=size(f,1);
 N=size(f,2);
+
+%zero padding
 if M< M1
     pad_size= (M1-M);
     pad= zeros(round(pad_size/2),N);
@@ -17,6 +20,7 @@ if N< N1
 end
 
 H=zeros(M,N);
+% shift DFT to centre
 for k=1:1:M
     for m=1:1:N
       H(k,m)=((-1)^(k+m));
@@ -27,7 +31,7 @@ f=f.*H;
 Fx= mydft(f);
 F= transpose(mydft(transpose(Fx)));
 
-  
+% DFT corresponds to image with origin at centre of image  
 F=F.*H;
       
 end

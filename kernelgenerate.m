@@ -1,0 +1,10 @@
+kernel=zeros(100,100);
+kernel(50,50:67)= 0.8;
+kernel(49,50:61)= 0.5;
+kernel(51,50:61)= 0.5;
+kernel(48,50:61)= 0.1;
+kernel(52,50:61)= 0.1;
+kernel=flip(kernel,2);
+imshow(kernel);
+imwrite(kernel,'Kernel5G.jpg');
+imshow(abs(mydft2(kernel,800,800)));

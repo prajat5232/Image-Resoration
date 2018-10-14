@@ -1,3 +1,4 @@
+%Author - Rajat Patel
 function f=myidft2(F)
 
 H= zeros(size(F,1),size(F,2));
